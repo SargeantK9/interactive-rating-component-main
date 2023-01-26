@@ -1,24 +1,45 @@
 :root {
   --orange: hsl(25, 97%, 53%);
   --light-grey: hsl(217, 12%, 63%);
-  --medium-grey: hsl(216, 12%, 54%);
+  --medium-grey: hsl(213, 19%, 24%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
-  --text-size: 15px;
+  --font-size: 15px;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Overpass", sans-serif;
+  max-width: 100%;
 }
 
 h1 {
   font-weight: 700;
+  color: white;
+  margin: 0;
 }
 
 p {
   font-weight: 400;
+  color: var(--light-grey);
+  margin-bottom: calc(var(--font-size) * 2);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+}
+
+.wrapper {
+  display: flex;
+  background-color: var(--dark-blue);
+  border-radius: var(--font-size);
+  padding: calc(var(--font-size) * 2);
+  width: calc(var(--font-size) * 21);
 }
 
 .rating-state {
@@ -26,19 +47,56 @@ p {
   flex-direction: column;
 }
 
-.ratings label {
+.rating-state img {
   width: var(--font-size);
-  display: inline-block;
-  border: solid 2px black;
-  transition: all 0.3;
+  padding: var(--font-size);
+  background-color: var(--medium-grey);
   border-radius: 50%;
-  padding: 15px 30px;
+  margin-bottom: var(--font-size);
+}
+
+.ratings label {
+  display: inline-flex;
+  height: calc(var(--font-size) * 3);
+  width: calc(var(--font-size) * 3);
+  background-color: var(--medium-grey);
+  border-radius: 50%;
+  color: var(--light-grey);
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  margin: 0 calc(var(--font-size) * 1.2) 0 0;
 }
 
 .ratings input[type="radio"] {
   display: none;
 }
 
+.ratings input[id="button5"] + label {
+  margin: 0;
+}
+
+.ratings input[type="radio"]:hover + label {
+  background-color: var(--orange);
+  color: white;
+}
+
 .ratings input[type="radio"]:checked + label {
-  border: solid 2px green;
+  background-color: var(--light-grey);
+  color: white;
+}
+
+#submitButton {
+  color: white;
+  width: 100%;
+  background-color: var(--orange);
+  border: 0 solid;
+  height: calc(var(--font-size) * 3);
+  margin: var(--font-size) 0 0 0;
+  border-radius: calc(var(--font-size) * 2);
+}
+
+#submitButton:hover {
+  background-color: white;
+  color: var(--orange);
 }
