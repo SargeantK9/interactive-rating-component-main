@@ -39,8 +39,8 @@ main {
   background-color: var(--dark-blue);
   border-radius: var(--font-size);
   padding: calc(var(--font-size) * 2);
-  width: calc(var(--font-size) * 24);
-  height: calc(var(--font-size) * 24);
+  width: calc(var(--font-size) * 23);
+  height: calc(var(--font-size) * 23);
 }
 
 #rating-state {
