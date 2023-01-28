@@ -20,12 +20,9 @@ Creating a rating submission web application.
 
 //Design/Development Perogatives
 
--Respond if the web application is incorrectly used (user accountability)
-	-In this case, pretty much just pressing submit without actually selecting a rating
--Main background should be consistent between display states
-	-This way the user can have the initial submission request state open and not have to adjust zoom or screen when the state changes to thank you state.
--Build everything relatively by font-size
-	-This looks like excessive use of var(--font-size) and calc(var(--font-size) etc.)
+-Respond if the web application is incorrectly used (user accountability). In this case, pretty much just pressing submit without actually selecting a rating
+-Main background should be consistent between display state. This way the user can have the initial submission request state open and not have to adjust zoom or screen when the state changes to thank you state.
+-Build everything relatively by font-size. This looks like excessive use of var(--font-size) and calc(var(--font-size) etc.)
 
 //Self-assessment
 
