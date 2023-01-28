@@ -1,7 +1,7 @@
 :root {
   --orange: hsl(25, 97%, 53%);
   --light-grey: hsl(217, 12%, 63%);
-  --medium-grey: hsl(213, 19%, 24%);
+  --medium-grey: hsl(213, 19%, 23%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
   --font-size: 15px;
@@ -39,15 +39,16 @@ main {
   background-color: var(--dark-blue);
   border-radius: var(--font-size);
   padding: calc(var(--font-size) * 2);
-  width: calc(var(--font-size) * 21);
+  width: calc(var(--font-size) * 24);
+  height: calc(var(--font-size) * 24);
 }
 
-.rating-state {
+#rating-state {
   display: flex;
   flex-direction: column;
 }
 
-.rating-state img {
+#rating-state img {
   width: var(--font-size);
   padding: var(--font-size);
   background-color: var(--medium-grey);
@@ -55,25 +56,41 @@ main {
   margin-bottom: var(--font-size);
 }
 
+.ratings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#rating-state p {
+  line-height: 1.5;
+}
+
 .ratings label {
   display: inline-flex;
-  height: calc(var(--font-size) * 3);
-  width: calc(var(--font-size) * 3);
+  height: calc(var(--font-size) * 3.5);
+  width: calc(var(--font-size) * 3.5);
   background-color: var(--medium-grey);
   border-radius: 50%;
   color: var(--light-grey);
   font-weight: 400;
   align-items: center;
   justify-content: center;
-  margin: 0 calc(var(--font-size) * 1.2) 0 0;
+  margin: auto;
+  margin-bottom: var(--font-size);
 }
 
 .ratings input[type="radio"] {
   display: none;
 }
 
+.ratings input[id="button1"] + label {
+  margin-left: 0;
+}
+
 .ratings input[id="button5"] + label {
-  margin: 0;
+  margin-right: 0;
 }
 
 .ratings input[type="radio"]:hover + label {
@@ -99,4 +116,28 @@ main {
 #submitButton:hover {
   background-color: white;
   color: var(--orange);
+}
+
+#thankyou-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#thankyou-state img {
+  margin: var(--font-size);
+}
+
+#thankyou-state p {
+  line-height: 1.5;
+}
+
+.rating-statement {
+  padding: calc(var(--font-size) * 0.5) var(--font-size);
+  color: var(--orange);
+  background-color: var(--medium-grey);
+  border-radius: var(--font-size);
+  line-height: 1;
 }

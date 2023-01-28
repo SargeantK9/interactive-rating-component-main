@@ -1,11 +1,20 @@
 let chosenRating;
 
-document.getElementById("submitButton").onclick = function() {
-  const button1 = document.getElementById("button1")
-  const button2 = document.getElementById("button2")
-  const button3 = document.getElementById("button3")
-  const button4 = document.getElementById("button4")
-  const button5 = document.getElementById("button5")
+document.getElementById("submitButton").addEventListener(
+  "click", () => {
+    document.getElementById("rating-state").style.display = "none";
+    document.getElementById("thankyou-state").style.display = "flex";
+    detectRating();
+},
+false
+);
+
+function detectRating() {
+  const button1 = document.getElementById("button1");
+  const button2 = document.getElementById("button2");
+  const button3 = document.getElementById("button3");
+  const button4 = document.getElementById("button4");
+  const button5 = document.getElementById("button5");
   switch (true) {
     case button1.checked:
       chosenRating = 1;
@@ -24,9 +33,6 @@ document.getElementById("submitButton").onclick = function() {
       break;
     default:
       document.getElementById("heading1").innerHTML = "Please select a rating."
-    }
-  document.getElementById("rating-state").setAttribute("hidden", "true");
-  document.getElementById("thankyou-state").setAttribute("hidden", "false");
-
   }
+  document.getElementById("rating-given").innerHTML = chosenRating;
 }

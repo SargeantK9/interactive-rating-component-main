@@ -22,10 +22,11 @@
       color: hsl(228, 45%, 44%);
     }
   </style>
+
+  <script src="./js/index.js" async></script>
 </head>
 
 <body>
-  <script src="./js/index.js"></script>
   <main>
     <div class="wrapper">
       <!-- Rating state start -->
@@ -54,10 +55,11 @@
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <div id="thankyou-state" hidden>
-        <p>You selected<span class="rating-given"></span> out of 5</p>
+      <div id="thankyou-state">
+        <img src="./images/illustration-thank-you.svg" alt="thank-you-image">
+        <p class="rating-statement">You selected <span id="rating-given"></span> out of 5</p>
         <h1>Thank you!</h1>
-        <p>We appreciate you taking the time to give a rating. If yo uever need more support, don't hesitate to get in touch.</p>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
       </div>
       <!-- Thank you state end -->
 
