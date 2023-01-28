@@ -1,3 +1,5 @@
+Full disclosure: I need to learn to properly format these READMEs (this one is rough), but that's for another day.
+
 //Overview
 
 Creating a rating submission web application.
