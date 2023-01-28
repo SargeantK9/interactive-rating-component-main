@@ -4,7 +4,7 @@
   --medium-grey: hsl(213, 19%, 23%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
-  --font-size: 15px;
+  --font-size: 1rem;
 }
 
 body {
@@ -111,6 +111,7 @@ main {
   height: calc(var(--font-size) * 3);
   margin: var(--font-size) 0 0 0;
   border-radius: calc(var(--font-size) * 2);
+  align-self: flex-end;
 }
 
 #submitButton:hover {
